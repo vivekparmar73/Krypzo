@@ -46,11 +46,13 @@ Krypzo is a modern Android app that brings you real-time cryptocurrency market i
 ---
 
 ## 📸 Screenshots
-![1-portrait](https://github.com/user-attachments/assets/3a93d1d2-5c43-41d8-a75f-d086dca5ef13)
-![IMG-20250528-WA0017-portrait](https://github.com/user-attachments/assets/f5223df2-2a66-4d9f-ad3c-26aeaba44159)
-![IMG-20250528-WA0018-portrait](https://github.com/user-attachments/assets/7d26a36e-b014-409c-bbbc-05e329b511c2)
-![IMG-20250528-WA0015-portrait](https://github.com/user-attachments/assets/0ef14b52-002b-4a49-b4dc-6e26633703d7)
-![IMG-20250528-WA0016-portrait](https://github.com/user-attachments/assets/a0800041-4b77-4438-a90a-4910f46ba804)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3a93d1d2-5c43-41d8-a75f-d086dca5ef13" height="400"/>
+  <img src="https://github.com/user-attachments/assets/f5223df2-2a66-4d9f-ad3c-26aeaba44159" height="400"/>
+  <img src="https://github.com/user-attachments/assets/7d26a36e-b014-409c-bbbc-05e329b511c2" height="400"/>
+  <img src="https://github.com/user-attachments/assets/0ef14b52-002b-4a49-b4dc-6e26633703d7" height="400"/>
+  <img src="https://github.com/user-attachments/assets/a0800041-4b77-4438-a90a-4910f46ba804" height="400"/>
+</div>
 
 
 ---
