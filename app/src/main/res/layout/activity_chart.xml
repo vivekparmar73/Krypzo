@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chartRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1D3E"
+    android:padding="@dimen/_10sdp"
+    tools:context=".ChartActivity">
+
+    <!-- Coin Header -->
+    <LinearLayout
+        android:id="@+id/coinHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:padding="@dimen/_12sdp">
+
+        <ImageView
+            android:id="@+id/ivCoinIcon"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/tvCoinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:text="Bitcoin" />
+    </LinearLayout>
+
+    <!-- Price and Time -->
+    <RelativeLayout
+        android:id="@+id/vview"
+        android:layout_below="@id/coinHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:padding="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/tvCurrentPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            tools:text="₹109.75K" />
+
+        <TextView
+            android:id="@+id/tvTimeRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCurrentPrice"
+            android:textColor="#A0A0A0"
+            android:textSize="@dimen/_10ssp"
+            tools:text="30 Days" />
+    </RelativeLayout>
+
+    <!-- Line Chart -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vview"
+        android:layout_above="@+id/progressBarChart" />
+
+    <!-- Progress Loader -->
+    <ProgressBar
+        android:id="@+id/progressBarChart"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

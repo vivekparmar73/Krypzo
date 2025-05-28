@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F1D3E"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp">
+
+    <!-- Header Text at the top -->
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest News 📰"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_alignParentTop="true"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <ProgressBar
+        android:id="@+id/newsProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerTitle"
+        android:layout_marginTop="@dimen/_10sdp" />
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121826"
+    android:padding="@dimen/_12sdp">
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trending 🔥"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_alignParentTop="true"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerTitle"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTrending"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_60sdp"
+                android:visibility="gone" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Repeat shimmer item block for visual effect -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="#2A3347" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp">
+
+                            <View
+                                android:layout_width="120dp"
+                                android:layout_height="16dp"
+                                android:background="#2A3347" />
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="12dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#2A3347" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="8dp">
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="16dp"
+                                android:background="#2A3347" />
+
+                            <View
+                                android:layout_width="60dp"
+                                android:layout_height="12dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#2A3347" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>
